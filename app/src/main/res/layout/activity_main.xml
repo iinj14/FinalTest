@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fb"
+
+    >
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ciecle_bg"
+        android:src="@drawable/backbutton"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/imgHeadphone"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginBottom="400dp"
+
+        android:adjustViewBounds="true"
+        android:src="@drawable/headphone"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:text="HEADPHONE"
+        android:textColor="#808080"
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <TextView
+        android:id="@+id/tvModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BZM-01"
+        android:textColor="#1A1A1A"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvBluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Bluetooth"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvModel"
+        app:layout_constraintTop_toBottomOf="@id/tvModel" />
+
+    <Switch
+        android:id="@+id/switchBluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/switch_color"
+        android:trackTint="@color/switch_color"
+        android:checked="true"
+        app:layout_constraintStart_toStartOf="@+id/tvBluetooth"
+        app:layout_constraintTop_toBottomOf="@+id/tvBluetooth"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/tvBatteryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:text="Battery"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvBluetooth"
+        app:layout_constraintTop_toBottomOf="@id/tvBluetooth" />
+
+    <TextView
+        android:id="@+id/tvBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textColor="#555555"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvBatteryLabel"
+        app:layout_constraintEnd_toEndOf="@+id/batteryProgress" />
+
+    <ProgressBar
+        android:id="@+id/batteryProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/progress_bar_round"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:progress="20"
+        android:progressTint="#E74C3C"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvBatteryLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvFreq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Frequency range"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvBatteryLabel"
+        app:layout_constraintTop_toBottomOf="@+id/viewFollowDivider" />
+
+    <TextView
+        android:id="@+id/tvFreqValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6Hz - 22kHz"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvFreq"
+        app:layout_constraintEnd_toEndOf="@+id/tvBattery" />
+
+    <TextView
+        android:id="@+id/tvBtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Bluetooth version"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvFreq"
+        app:layout_constraintTop_toBottomOf="@id/tvFreq" />
+
+    <TextView
+        android:id="@+id/tvBtVersionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth 5.0"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvBtVersion"
+        app:layout_constraintEnd_toEndOf="@+id/tvBattery" />
+
+    <TextView
+        android:id="@+id/tvPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Power supply"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvBtVersion"
+        app:layout_constraintTop_toBottomOf="@id/tvBtVersion" />
+
+    <TextView
+        android:id="@+id/tvPowerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.0 V DC, 330mA"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvPower"
+        app:layout_constraintEnd_toEndOf="@+id/tvBattery" />
+
+    <TextView
+        android:id="@+id/tvFirmware"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Firmware"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvPower"
+        app:layout_constraintTop_toBottomOf="@id/tvPower" />
+
+    <View
+        android:id="@+id/SecondviewFollowDivider"
+        android:layout_width="370dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/divider_round"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/tvFirmware"
+        app:layout_constraintVertical_bias="0.508" />
+
+    <View
+        android:id="@+id/viewFollowDivider"
+        android:layout_width="370dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@drawable/divider_round"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/batteryProgress" />
+
+    <TextView
+        android:id="@+id/tvFirmwareValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4824.13az"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvFirmware"
+        app:layout_constraintEnd_toEndOf="@+id/tvBattery" />
+
+
+    <ImageView
+        android:id="@+id/Dolby"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="@+id/tvFirmware"
+        app:layout_constraintTop_toBottomOf="@+id/SecondviewFollowDivider" />
+
+    <Switch
+        android:id="@+id/switchDolby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+
+        android:checked="true"
+        android:thumbTint="@color/switch_color"
+        android:trackTint="@color/switch_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvBattery"
+/>
+
+    <TextView
+        android:id="@+id/tvNoise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Noise cancellation"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="@+id/Dolby"
+        app:layout_constraintTop_toBottomOf="@id/Dolby" />
+
+    <Switch
+        android:id="@+id/switchNoise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvNoise"
+        app:layout_constraintEnd_toEndOf="@+id/tvBattery" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_round"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/switchNoise"
+        app:layout_constraintStart_toStartOf="@+id/tvNoise"
+        app:layout_constraintTop_toBottomOf="@id/tvNoise" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
